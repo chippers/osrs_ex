@@ -1,0 +1,81 @@
+defmodule OsrsEx.Hiscores.Hiscore do
+  @moduledoc "A struct representing a player's hiscores."
+
+  alias OsrsEx.Hiscores.{Skill, Activity}
+
+  defstruct [
+    :overall,
+    :attack,
+    :defence,
+    :strength,
+    :hitpoints,
+    :ranged,
+    :prayer,
+    :magic,
+    :cooking,
+    :woodcutting,
+    :fletching,
+    :fishing,
+    :firemaking,
+    :crafting,
+    :smithing,
+    :mining,
+    :herblore,
+    :agility,
+    :thieving,
+    :slayer,
+    :farming,
+    :runecraft,
+    :hunter,
+    :construction,
+    :clue_scroll_easy,
+    :clue_scroll_medium,
+    :clue_scroll_hard,
+    :clue_scroll_elite,
+    :clue_scroll_master,
+    :clue_scroll_all,
+    :bounty_hunter_rogue,
+    :bounty_hunter_hunter,
+    :last_man_standing,
+  ]
+
+  @typedoc """
+    A struct representing the anonymous tuples
+    returned by the raw Jagex Hiscores API.
+  """
+  @type t :: %__MODULE__{
+               overall: Skill.t,
+               attack: Skill.t,
+               defence: Skill.t,
+               strength: Skill.t,
+               hitpoints: Skill.t,
+               ranged: Skill.t,
+               prayer: Skill.t,
+               magic: Skill.t,
+               cooking: Skill.t,
+               woodcutting: Skill.t,
+               fletching: Skill.t,
+               fishing: Skill.t,
+               firemaking: Skill.t,
+               crafting: Skill.t,
+               smithing: Skill.t,
+               mining: Skill.t,
+               herblore: Skill.t,
+               agility: Skill.t,
+               thieving: Skill.t,
+               slayer: Skill.t,
+               farming: Skill.t,
+               runecraft: Skill.t,
+               hunter: Skill.t,
+               construction: Skill.t,
+               clue_scroll_easy: Activity.t,
+               clue_scroll_medium: Activity.t,
+               clue_scroll_hard: Activity.t,
+               clue_scroll_elite: Activity.t,
+               clue_scroll_master: Activity.t,
+               clue_scroll_all: Activity.t,
+               bounty_hunter_rogue: Activity.t,
+               bounty_hunter_hunter: Activity.t,
+               last_man_standing: Activity.t,
+             }
+end
